@@ -6,6 +6,7 @@ is a library which implements remote/inter-process procedure call using Redis as
 
 ## process1.js
 
+```javascript
     var RedRpc = require('red.rpc');
     var red = new RedRpc({
         namespace: 'my.app'
@@ -28,9 +29,11 @@ is a library which implements remote/inter-process procedure call using Redis as
             });
         }
     });
+```
 
 ## process2.js
 
+```javascript
     var RedRpc = require('red.rpc');
     var red = new RedRpc({
         namespace: 'my.app'
@@ -43,9 +46,11 @@ is a library which implements remote/inter-process procedure call using Redis as
             }, 0);
         }
     });
+```
         
 ## process3.js
 
+```javascript
     var RedRpc = require('red.rpc');
     var red = new RedRpc({
         namespace: 'my.app'
@@ -59,3 +64,4 @@ is a library which implements remote/inter-process procedure call using Redis as
         .then(function(string) {
             console.log(string);
         });
+```
